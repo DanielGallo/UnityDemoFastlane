@@ -14,7 +14,7 @@ platform :ios do
     
     # Import the developer's signing certificates
     import_certificate(
-      certificate_path: File.absolute_path("/tmp/signing.cer"),
+      certificate_path: "/tmp/signing.cer",
       certificate_password: options[:certificate_password],
       keychain_name: "teamcity",
       keychain_password: "teamcity"
@@ -22,32 +22,32 @@ platform :ios do
     
     # Also import the 6 Apple CA certificates
     import_certificate(
-      certificate_path: File.absolute_path("/tmp/AppleWWDRCA.cer"),
+      certificate_path: "/tmp/AppleWWDRCA.cer",
       keychain_name: "teamcity",
       keychain_password: "teamcity"
     )
     import_certificate(
-      certificate_path: File.absolute_path("/tmp/AppleWWDRCAG2.cer"),
+      certificate_path: "/tmp/AppleWWDRCAG2.cer",
       keychain_name: "teamcity",
       keychain_password: "teamcity"
     )
     import_certificate(
-      certificate_path: File.absolute_path("/tmp/AppleWWDRCAG3.cer"),
+      certificate_path: "/tmp/AppleWWDRCAG3.cer",
       keychain_name: "teamcity",
       keychain_password: "teamcity"
     )
     import_certificate(
-      certificate_path: File.absolute_path("/tmp/AppleWWDRCAG4.cer"),
+      certificate_path: "/tmp/AppleWWDRCAG4.cer",
       keychain_name: "teamcity",
       keychain_password: "teamcity"
     )
     import_certificate(
-      certificate_path: File.absolute_path("/tmp/AppleWWDRCAG5.cer"),
+      certificate_path: "/tmp/AppleWWDRCAG5.cer",
       keychain_name: "teamcity",
       keychain_password: "teamcity"
     )
     import_certificate(
-      certificate_path: File.absolute_path("/tmp/AppleWWDRCAG6.cer"),
+      certificate_path: "/tmp/AppleWWDRCAG6.cer",
       keychain_name: "teamcity",
       keychain_password: "teamcity"
     )
