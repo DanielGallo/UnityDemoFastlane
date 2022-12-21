@@ -12,10 +12,17 @@ platform :ios do
       timeout: 3600
     )
     
-    # Import the developer's signing certificates
+    # Import the developer's private key
+    import_certificate(
+      certificate_path: File.absolute_path("tmp/private.p12"),
+      certificate_password: options[:certificate_password],
+      keychain_name: "teamcity",
+      keychain_password: "teamcity"
+    )
+    
+    # Import the developer's signing certificate
     import_certificate(
       certificate_path: File.absolute_path("tmp/signing.cer"),
-      certificate_password: options[:certificate_password],
       keychain_name: "teamcity",
       keychain_password: "teamcity"
     )
