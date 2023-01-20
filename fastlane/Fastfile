@@ -90,7 +90,8 @@ platform :ios do
   desc "Build unsigned archive Unity sample project for iOS"
   lane :build_xcarchive do
     build_app(
-      archive_path: "build/Nodulus.xcarchive",
+      build_path: "build",
+      archive_path: "Nodulus.xcarchive",
       export_method: "app-store",
       skip_codesigning: true,
       skip_package_ipa: true
