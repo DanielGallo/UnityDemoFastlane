@@ -76,6 +76,7 @@ platform :ios do
     )
     
     build_app(
+      build_path: "build",
       export_options: {
         signingStyle: "manual",
         provisioningProfiles: {
@@ -89,7 +90,7 @@ platform :ios do
   desc "Build unsigned archive Unity sample project for iOS"
   lane :build_xcarchive do
     build_app(
-      archive_path: "Nodulus.xcarchive",
+      archive_path: "build/Nodulus.xcarchive",
       export_method: "app-store",
       skip_codesigning: true,
       skip_package_ipa: true
