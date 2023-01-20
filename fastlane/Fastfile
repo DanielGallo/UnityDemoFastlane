@@ -76,7 +76,6 @@ platform :ios do
     )
     
     build_app(
-      output_directory: "build",
       export_options: {
         signingStyle: "manual",
         provisioningProfiles: {
